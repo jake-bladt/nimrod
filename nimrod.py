@@ -24,6 +24,7 @@ class PageAssets:
 class ImageGrabber:
   def __init__(self, target):
     self.target = target + datetime.now().strftime('%Y%m%d%H%M%s') + '/';
+    os.mkdir(self.target)
 
   def grab_image(self, url):
     path = urlparse(url).path;
