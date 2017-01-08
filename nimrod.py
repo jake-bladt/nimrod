@@ -6,10 +6,10 @@ from urllib.request import urlopen
 class PageAssets:
   def parse_page(self, url, depth):
     self.url = url
-    self.page_title = soup.title.string
 
     r = urlopen(url).read()
     soup = BeautifulSoup(r)
+    self.page_title = soup.title.string
 
     all_anchors = soup.find_all('a')
     self.links = all_anchors.get('href')
