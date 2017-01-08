@@ -1,4 +1,4 @@
-import sys
+import sys, os
 
 from bs4 import BeautifulSoup
 from urllib.request import urlopen, urlretrieve
@@ -23,7 +23,7 @@ class PageAssets:
 
 class ImageGrabber:
   def __init__(self, target):
-    self.target = target + datetime.now().strftime('%Y%m%d%H%M%s') + '/';
+    self.target = target + datetime.now().strftime('%Y%m%d%H%M%S') + '/';
     os.mkdir(self.target)
 
   def grab_image(self, url):
