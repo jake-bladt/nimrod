@@ -26,3 +26,5 @@ depth = sys.argv[2];
 
 pa = PageAssets().parse_page(url, depth)
 print(pa.page_title)
+for link in pa.links:
+  print(link)
