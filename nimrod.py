@@ -1,7 +1,7 @@
 import sys
 
 from bs4 import BeautifulSoup
-from urllib.request import urlopen
+from urllib.request import urlopen, urlretrieve
 from urllib.parse import urlparse
 
 class PageAssets:
@@ -28,7 +28,7 @@ class ImageGrabber:
     path = urlparse(url).path;
     filename = path.split('/')[-1]
     print('Copying ' + url + ' to ' + self.target + filename)
-    urllib.urlretrieve(url, self.target + filename)
+    urlretrieve(url, self.target + filename)
 
 
 
