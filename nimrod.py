@@ -12,10 +12,10 @@ class PageAssets:
     self.page_title = soup.title.string
 
     all_anchors = soup.find_all('a')
-    self.links = all_anchors.get('href')
+    self.links = map((lambda a: a.href), all_anchors)
 
     all_images = soup.find_all('img')
-    self.images = all_images.get('src')
+    self.images = map((lambda i: i.src), all_images)
 
     return self
 
