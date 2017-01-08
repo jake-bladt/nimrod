@@ -1,2 +1,2 @@
 import urllib
-urllib.urlretrieve("https://lh3.ggpht.com/QcM5ze2mGK0frV4cbdL7otLHts8p_RoC-N2mggz7M6Jv36vZN3B9Y3OmFvJwwLHuUyDc=w300-rw", "/mounted/nimrod/kitten.jpg")
+urllib.urlretrieve("http://images2.fanpop.com/images/photos/6900000/cute-kitten-cats-6987468-500-431.jpg", "/mounted/nimrod/kitten.jpg")
