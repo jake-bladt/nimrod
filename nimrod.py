@@ -7,4 +7,6 @@ r = urlopen("http://www.yahoo.com").read()
 soup = BeautifulSoup(r)
 
 print(soup.title.string)
-print(soup.find_all("a"))
+all_anchors = soup.find_all("img")
+for anchor in all_anchors:
+  print(anchor.get('src'))
