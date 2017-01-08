@@ -3,6 +3,7 @@ import sys
 from bs4 import BeautifulSoup
 from urllib.request import urlopen, urlretrieve
 from urllib.parse import urlparse
+from datetime import datetime
 
 class PageAssets:
   def parse_page(self, url, depth):
@@ -22,7 +23,7 @@ class PageAssets:
 
 class ImageGrabber:
   def __init__(self, target):
-    self.target = target;
+    self.target = target + datetime.now().strftime('%Y%m%d%H%M%s') + '/';
 
   def grab_image(self, url):
     path = urlparse(url).path;
