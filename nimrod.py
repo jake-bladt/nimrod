@@ -5,4 +5,4 @@ import urllib
 r = urllib.open("http://www.google.com").read()
 soup = BeautifulSoup(r)
 
-print soup.prettify()[0:1000]
+print(soup.prettify()[0:1000])

@@ -1,6 +1,5 @@
 apt-get update
-apt-get install build-essential libssl-dev gettext unzip git python-pip  python-dev -y \
-   apt-transport-https ca-certificates
+apt-get install python3-pip
 
-pip install --upgrade pip
-pip install beautifulsoup4
+pip3 install --upgrade pip3
+pip3 install beautifulsoup4
