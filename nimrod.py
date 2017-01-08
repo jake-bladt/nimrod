@@ -25,7 +25,8 @@ class ImageGrabber:
     self.target = target;
 
   def grab_image(self, url):
-    filename = urlparse(url).path;
+    path = urlparse(url).path;
+    filename = path.split('/')[-1]
     print(self.target + filename)
 
 # urllib.urlretrieve("http://images2.fanpop.com/images/photos/6900000/cute-kitten-cats-6987468-500-431.jpg", "/mounted/nimrod/kitten.jpg")
@@ -39,9 +40,6 @@ print(pa.page_title)
 for link in pa.links:
   print(link)
 
+grabber = ImageGrabber(target)
 for img in pa.images:
-  print(img)
-  grabber = ImageGrabber(target)
   grabber.grab_image(img)
-
-
