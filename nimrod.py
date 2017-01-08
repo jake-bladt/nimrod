@@ -27,9 +27,11 @@ class ImageGrabber:
   def grab_image(self, url):
     path = urlparse(url).path;
     filename = path.split('/')[-1]
-    print(self.target + filename)
+    print('Copying ' + url + ' to ' + self.target + filename)
+    urllib.urlretrieve(url, self.target + filename)
 
-# urllib.urlretrieve("http://images2.fanpop.com/images/photos/6900000/cute-kitten-cats-6987468-500-431.jpg", "/mounted/nimrod/kitten.jpg")
+
+
 
 url = sys.argv[1];
 depth = sys.argv[2];
