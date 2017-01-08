@@ -4,7 +4,7 @@ from bs4 import BeautifulSoup
 from urllib.request import urlopen
 
 class PageAssets:
-  def parse_page(url, depth):
+  def parse_page(self, url, depth):
     self.url = url
     self.page_title = soup.title.string
 
